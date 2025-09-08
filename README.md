@@ -53,6 +53,7 @@ DFT and FFT of a given sequence in SCILAB was obtained.
 PC installed with SCILAB. 
 
 # PROGRAM: 
+```
 // Load audio
 [x, fs] = wavread("C:\Users\acer\Downloads\waptt");
 
@@ -72,7 +73,7 @@ playsnd(y, fs);
 
 // Save the trimmed audio
 wavwrite(y, fs, "C:\Users\acer\Downloads\waptt2_trimmed");
-
+```
 # RESULT: 
   Analysis of audio signal for noise removal was removed.
 
@@ -85,7 +86,7 @@ To perform Linear and Circular Convolution for two given sequence using SCILAB.
 PC installed with SCILAB. 
 
 # PROGRAM (Linear Convolution): 
-
+```
 // Linear Convolution
 clc; clear;
 x = input("Enter x(n) as a row vector: ");   // e.g., [1 1 2 1]
@@ -122,9 +123,9 @@ xtitle("Impulse response h(n)");
 subplot(3,1,3);
 plot2d3(0:Ny-1, y);   // stem plot for convolution
 xtitle("Linear Convolution y(n) = x(n) * h(n)");
-
+```
 # PROGRAM (Circular Convolution): 
-
+```
 // Circular Convolution
 clc;
 clear;
@@ -166,7 +167,7 @@ subplot(3,1,3);
 plot2d3(0:N-1, real(y_circ)); // real part is the result
 xlabel("n"); ylabel("y(n)");
 title("Circular Convolution Output");
-
+```
 # OUTPUT (Linear Convolution): 
 ![WhatsApp Image 2025-09-08 at 15 17 39_21bd9f19](https://github.com/user-attachments/assets/c42864a6-aeda-4ffa-be31-1edcb7b95086)
 
@@ -177,4 +178,3 @@ title("Circular Convolution Output");
 Linear and Circular Convolution for two given sequence using SCILAB are performed.
 
 
-# RESULT: 
