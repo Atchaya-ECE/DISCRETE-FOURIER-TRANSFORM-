@@ -57,13 +57,10 @@ plot2d3(f, atan(imag(X_fft), real(X_fft))); // atan2 equivalent
 xtitle("Phase Spectrum using FFT");
 
 ```
-# OUTPUT: 
-Using Direct DFT
-
+# OUTPUT(Using Direct DFT):
 <img width="762" height="574" alt="image" src="https://github.com/user-attachments/assets/ae2afdeb-9fce-4235-bacb-919ce4eecf2f" />
 
-Using FFT
-
+# OUTPUT(Using FFT)
 <img width="763" height="574" alt="image" src="https://github.com/user-attachments/assets/dd7377b0-6434-4fbf-8b43-b89bf414381e" />
 
 # Result:
