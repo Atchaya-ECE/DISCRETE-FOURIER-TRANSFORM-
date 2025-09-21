@@ -79,13 +79,10 @@ PC installed with SCILAB.
 
 # PROGRAM: 
 ```
-// Load audio
-[x, fs] = wavread("C:\Users\acer\Downloads\waptt");
-
-// Number of samples to cut (2 seconds)
-cut_samples = round(2 * fs);
+[x, fs] = wavread("C:\\Users\\acer\\Downloads\\waptt.wav");
 
 // Remove first 2 seconds
+cut_samples = round(2 * fs);
 y = x(cut_samples+1:$);
 
 // Play original
@@ -97,7 +94,7 @@ disp("Playing Audio without first 2s...");
 playsnd(y, fs);
 
 // Save the trimmed audio
-wavwrite(y, fs, "C:\Users\acer\Downloads\waptt2_trimmed");
+wavwrite(y, fs, "C:\\Users\\acer\\Downloads\\waptt2_trimmed.wav");
 ```
 # RESULT: 
   Analysis of audio signal for noise removal was removed.
