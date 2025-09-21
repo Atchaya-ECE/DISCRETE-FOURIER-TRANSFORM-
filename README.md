@@ -8,9 +8,6 @@ PC installed with SCILAB.
 
 # PROGRAM: 
 ```
-// EXP 1 A : COMPUTATION OF DFT USING DIRECT AND FFT
-// AIM: To Obtain DFT and FFT of a given sequence in SCILAB
-
 clc;
 clear;
 
@@ -57,6 +54,7 @@ plot2d3(f, atan(imag(X_fft), real(X_fft))); // atan2 equivalent
 xtitle("Phase Spectrum using FFT");
 
 ```
+
 # OUTPUT(Using Direct DFT):
 <img width="762" height="574" alt="image" src="https://github.com/user-attachments/assets/ae2afdeb-9fce-4235-bacb-919ce4eecf2f" />
 
@@ -76,8 +74,6 @@ PC installed with SCILAB/Python.
 
 # PROGRAM:
 ```
-// EXP 1: ANALYSIS OF DFT WITH AUDIO SIGNAL
-// AIM: To analyze audio signal by removing unwanted frequency
 clc; clear;
 
 // -------------------------
