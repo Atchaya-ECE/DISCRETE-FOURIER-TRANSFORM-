@@ -61,6 +61,7 @@ xtitle("Phase Spectrum using FFT");
 DFT using direct
 
 <img width="762" height="574" alt="image" src="https://github.com/user-attachments/assets/ae2afdeb-9fce-4235-bacb-919ce4eecf2f" />
+
 FFT
 
 <img width="763" height="574" alt="image" src="https://github.com/user-attachments/assets/dd7377b0-6434-4fbf-8b43-b89bf414381e" />
