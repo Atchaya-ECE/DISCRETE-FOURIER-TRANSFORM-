@@ -8,38 +8,60 @@ PC installed with SCILAB.
 
 # PROGRAM: 
 ```
-// DISCRETE FOURIER TRANSFORM 
+// EXP 1 A : COMPUTATION OF DFT USING DIRECT AND FFT
+// AIM: To Obtain DFT and FFT of a given sequence in SCILAB
+
 clc;
 clear;
 
-// Take input discrete signal
+// Input sequence
 x = input("Enter discrete signal as [x1 x2 ...]: ");
 N = length(x);
 
-// Initialize DFT output
-X = zeros(1, N);
-
-// DFT calculation using formula
+// -------------------------
+// DFT using direct formula
+// -------------------------
+X_dft = zeros(1, N);
 for k = 0:N-1
     for n = 0:N-1
-        X(k+1) = X(k+1) + x(n+1) * exp(-%i * 2 * %pi * k * n / N);
+        X_dft(k+1) = X_dft(k+1) + x(n+1) * exp(-%i * 2 * %pi * k * n / N);
     end
 end
 
 // Frequency axis (normalized)
 f = (0:N-1) / N;
 
-// Plot magnitude and phase spectrum
+// Plot DFT magnitude & phase
+scf(0); // new figure window
 subplot(2,1,1);
-plot2d3(f, abs(X));
-xtitle("Magnitude Spectrum of DFT");
+plot2d3(f, abs(X_dft));
+xtitle("Magnitude Spectrum using Direct DFT");
 
 subplot(2,1,2);
-plot2d3(f, atan(imag(X), real(X))); // atan2 for phase
-xtitle("Phase Spectrum of DFT");
+plot2d3(f, atan(imag(X_dft), real(X_dft))); // atan2 equivalent
+xtitle("Phase Spectrum using Direct DFT");
+
+// -------------------------
+// FFT using built-in function
+// -------------------------
+X_fft = fft(x, -1);   // -1 for forward FFT in Scilab
+
+// Plot FFT magnitude & phase
+scf(1); // new figure window
+subplot(2,1,1);
+plot2d3(f, abs(X_fft));
+xtitle("Magnitude Spectrum using FFT");
+
+subplot(2,1,2);
+plot2d3(f, atan(imag(X_fft), real(X_fft))); // atan2 equivalent
+xtitle("Phase Spectrum using FFT");
+
 ```
 # OUTPUT: 
-![WhatsApp Image 2025-09-08 at 15 33 11_a2cbdd18](https://github.com/user-attachments/assets/82855dfe-bc7d-4c28-aab7-3f9402fd6316)
+DFT using direct
+<img width="762" height="574" alt="image" src="https://github.com/user-attachments/assets/ae2afdeb-9fce-4235-bacb-919ce4eecf2f" />
+FFT
+<img width="763" height="574" alt="image" src="https://github.com/user-attachments/assets/dd7377b0-6434-4fbf-8b43-b89bf414381e" />
 
 #Result:
 DFT and FFT of a given sequence in SCILAB was obtained.
